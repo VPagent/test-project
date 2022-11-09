@@ -1,0 +1,35 @@
+@import '../../sass/reset.scss';
+
+.guest_list{
+    list-style: none;
+
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+
+    &_item{
+        margin-top: 10px;
+        padding: 0;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #808080;
+        transition: transform, color 250ms ease-in-out;
+
+
+        &:first-child{
+            margin-top: 0px;
+        }
+        &:hover .guest_list_link,
+        &:focus .guest_list_link{
+            color: white;
+            transform: scale(1.05);
+            transition: transform 250ms ease-in-out;
+        }
+    }
+    &_link{
+        text-decoration: none;
+        color: grey;
+        &:global(.active){
+            color: white;
+        }
+    }
+}
